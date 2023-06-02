@@ -1,0 +1,20 @@
+<!-- repeating stuff should be inherited from some template, right? -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+        <title>flask blog - {{ title }}</title>
+    {% else %}
+        <title>flask blog</title>
+    {% endif %}
+</head>
+<body>
+    <!-- this is a block, child templates should override (e.g. contents-template to stuff that is unique to this page -->
+    {% block content %}{% endblock %}
+
+
+
+</body>
+</html>

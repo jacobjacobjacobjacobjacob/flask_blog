@@ -1,0 +1,15 @@
+<!-- make things inherit from the layout.html-template -->
+{% extends "layout.html" %}
+{% block content %}
+    <!-- looping through the posts-dict(s) -->
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>by {{ post.author }} on {{ post.date_posted }}</p>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+{% endblock content %}
+
+
+
+
+<!-- this is how you make comment in html -->
